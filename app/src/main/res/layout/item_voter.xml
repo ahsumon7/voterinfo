@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title (e.g. উপজেলা / শাখা নাম) -->
+        <TextView
+            android:id="@+id/tvVoterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="শেরপুর গৌরীপুর - ১"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <!-- Subtitle (e.g. ইউনিয়ন সংখ্যা) -->
+        <TextView
+            android:id="@+id/tvVoterSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ইউনিয়ন - ১৪টি"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="4dp"/>
+
+        <!-- List content -->
+        <TextView
+            android:id="@+id/tvVoterDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="১। কামারিয়া ইউনিয়ন পরিষদ\n২। ভাতশালা ইউনিয়ন কমপ্লেক্স\n৩। চরপক্ষীমারি উচ্চ বিদ্যালয়"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

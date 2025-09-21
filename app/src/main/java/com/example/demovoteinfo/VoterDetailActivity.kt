@@ -1,5 +1,7 @@
 package com.example.demovoteinfo
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.widget.TextView
@@ -22,6 +24,8 @@ class VoterDetailActivity : AppCompatActivity() {
         val tvFemaleVoters: TextView = findViewById(R.id.tvFemaleVoters)
         val tvThirdGenderVoters: TextView = findViewById(R.id.tvThirdGenderVoters)
         val tvTotalVoters: TextView = findViewById(R.id.tvTotalVoters)
+        val tvContactName: TextView = findViewById(R.id.tvContactName)
+        val tvContactPhone: TextView = findViewById(R.id.tvContactPhone)
 
         @Suppress("DEPRECATION")
         val votingCenter = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -36,6 +40,23 @@ class VoterDetailActivity : AppCompatActivity() {
             tvFemaleVoters.text = "${getString(R.string.female_voters)}: ${it.femaleVoters}"
             tvThirdGenderVoters.text = "${getString(R.string.third_gender_voters)}: ${it.thirdGenderVoters}"
             tvTotalVoters.text = "${getString(R.string.total_voters)}: ${it.totalVoters}"
+
+            // Show contact info
+            tvContactName.text = "Contact Name: ${it.contactName ?: "N/A"}"
+            tvContactPhone.text = it.contactPhone?.let { phone -> "Call: $phone" } ?: "N/A"
+
+            // Make phone number clickable
+            tvContactPhone.setOnClickListener { _ ->
+                val phoneNumber = it.contactPhone
+                if (!phoneNumber.isNullOrEmpty()) {
+                    val dialIntent = Intent(Intent.ACTION_DIAL).apply {
+                        data = Uri.parse("tel:$phoneNumber")
+                    }
+                    if (dialIntent.resolveActivity(packageManager) != null) {
+                        startActivity(dialIntent)
+                    }
+                }
+            }
         }
     }
 }

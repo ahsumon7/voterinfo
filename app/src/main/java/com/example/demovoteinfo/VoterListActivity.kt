@@ -84,6 +84,8 @@ class ExpandableListAdapter(
         }
     }
 
+
+
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (val item = items[position]) {
             is DisplayableItem.AreaGroupItem -> {
@@ -106,13 +108,24 @@ class ExpandableListAdapter(
 
     // --- ViewHolder Classes ---
 
-    class AreaGroupViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+/*    class AreaGroupViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // Example: val groupNameTextView: TextView = itemView.findViewById(R.id.groupName)
         fun bind(areaGroup: AreaGroup) {
             // Bind areaGroup data to your views
             (itemView as? TextView)?.text = areaGroup.name // Placeholder
         }
+    }*/
+
+    class AreaGroupViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val tvGroupName: TextView = itemView.findViewById(R.id.tvGroupName)
+        private val tvGroupSubTitle: TextView = itemView.findViewById(R.id.tvGroupSubTitle)
+
+        fun bind(areaGroup: AreaGroup) {
+            tvGroupName.text = areaGroup.name
+            tvGroupSubTitle.text = "মোট কেন্দ্র: ${areaGroup.votingCenters.size}" // Optional
+        }
     }
+
 
     class VotingCenterViewHolder(
         itemView: View,
@@ -175,7 +188,15 @@ class VoterListActivity : AppCompatActivity() {
             AreaGroup(
                 name = "শেরপুর পৌরসভা-১",
                 votingCenters = listOf(
-                    VotingCenter(name = "১। নবীনগর সরকারি প্রাথমিক বিদ্যালয়", maleVoters = 1200, femaleVoters = 1150, thirdGenderVoters = 2),
+                    VotingCenter(name = "১। নবীনগর সরকারি প্রাথমিক বিদ্যালয়", maleVoters = 1200, femaleVoters = 1150, thirdGenderVoters = 2,contactName = "Mr. Karim", contactPhone = "+8801711122233"),
+                    VotingCenter(name = "২। পৌরসভার মডেল স্কুল", maleVoters = 950, femaleVoters = 980, thirdGenderVoters = 1,contactName = "Mr. Karim", contactPhone = "+8801711122233"),
+                    VotingCenter(name = "১। নবীনগর সরকারি প্রাথমিক বিদ্যালয়", maleVoters = 1200, femaleVoters = 1150, thirdGenderVoters = 2,contactName = "Mr. Karim", contactPhone = "+8801711122233"),
+                    VotingCenter(name = "২। পৌরসভার মডেল স্কুল", maleVoters = 950, femaleVoters = 980, thirdGenderVoters = 1,contactName = "Mr. Karim", contactPhone = "+8801711122233"),
+                    VotingCenter(name = "১। নবীনগর সরকারি প্রাথমিক বিদ্যালয়", maleVoters = 1200, femaleVoters = 1150, thirdGenderVoters = 2,contactName = "Mr. Karim", contactPhone = "+8801711122233"),
+                    VotingCenter(name = "২। পৌরসভার মডেল স্কুল", maleVoters = 950, femaleVoters = 980, thirdGenderVoters = 1,contactName = "Mr. Karim", contactPhone = "+8801711122233"),
+                    VotingCenter(name = "১। নবীনগর সরকারি প্রাথমিক বিদ্যালয়", maleVoters = 1200, femaleVoters = 1150, thirdGenderVoters = 2,contactName = "Mr. Karim", contactPhone = "+8801711122233"),
+                    VotingCenter(name = "২। পৌরসভার মডেল স্কুল", maleVoters = 950, femaleVoters = 980, thirdGenderVoters = 1,contactName = "Mr. Karim", contactPhone = "+8801711122233"),
+                    VotingCenter(name = "১। নবীনগর সরকারি প্রাথমিক বিদ্যালয়", maleVoters = 1200, femaleVoters = 1150, thirdGenderVoters = 2,contactName = "Mr. Karim", contactPhone = "+8801711122233"),
                     VotingCenter(name = "২। পৌরসভার মডেল স্কুল", maleVoters = 950, femaleVoters = 980, thirdGenderVoters = 1)
                 )
             ),
@@ -184,7 +205,10 @@ class VoterListActivity : AppCompatActivity() {
                 votingCenters = listOf(
                     VotingCenter(name = "১। কামারিয়া ইউনিয়ন পরিষদ", maleVoters = 2500, femaleVoters = 2400, thirdGenderVoters = 5),
                     VotingCenter(name = "২। ভাতশালা ইউনিয়ন কমপ্লেক্স", maleVoters = 1800, femaleVoters = 1750, thirdGenderVoters = 3),
-                    VotingCenter(name = "৩। চরপক্ষীমারী উচ্চ বিদ্যালয়", maleVoters = 2200, femaleVoters = 2100, thirdGenderVoters = 4)
+                    VotingCenter(name = "৩। চরপক্ষীমারী উচ্চ বিদ্যালয়", maleVoters = 2200, femaleVoters = 2100, thirdGenderVoters = 4),
+                    VotingCenter(name = "4। কামারিয়া ইউনিয়ন পরিষদ", maleVoters = 2500, femaleVoters = 2400, thirdGenderVoters = 5),
+                    VotingCenter(name = "২2। ভাতশালা ইউনিয়ন কমপ্লেক্স", maleVoters = 1800, femaleVoters = 1750, thirdGenderVoters = 3),
+                    VotingCenter(name = "৩3। চরপক্ষীমারী উচ্চ বিদ্যালয়", maleVoters = 2200, femaleVoters = 2100, thirdGenderVoters = 4)
                 )
             )
             // Add more sample AreaGroups here
