@@ -96,17 +96,17 @@
                 android:padding="16dp"
                 tools:ignore="UseCompoundDrawables">
 
-            
-            <ImageView
-                android:layout_width="97dp"
-            android:layout_height="51dp"
-            android:layout_marginBottom="8dp"
-            android:contentDescription="@string/button_placeholder_1"
-            android:foreground="@drawable/ic_voter_info"
-            android:src="@mipmap/ic_launcher"
-            android:visibility="visible"
-            tools:srcCompat="@tools:sample/backgrounds/scenic[0]"
-            tools:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="97dp"
+                    android:layout_height="51dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/button_placeholder_1"
+                    android:foreground="@drawable/ic_leaders_info"
+                    android:src="@mipmap/ic_launcher"
+                    android:visibility="visible"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic[0]"
+                    tools:visibility="visible" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -139,7 +139,7 @@
                     android:layout_height="51dp"
                     android:layout_marginBottom="8dp"
                     android:contentDescription="@string/button_placeholder_2"
-                    android:foreground="@drawable/ic_voter_info"
+                    android:foreground="@drawable/ic_police_info"
                     android:src="@mipmap/ic_launcher"
                     android:visibility="visible"
                     tools:srcCompat="@tools:sample/backgrounds/scenic[0]"
@@ -176,7 +176,7 @@
                     android:layout_height="51dp"
                     android:layout_marginBottom="8dp"
                     android:contentDescription="@string/button_placeholder_3"
-                    android:foreground="@drawable/ic_voter_info"
+                    android:foreground="@drawable/ic_journalist_info"
                     android:src="@mipmap/ic_launcher"
                     android:visibility="visible"
                     tools:srcCompat="@tools:sample/backgrounds/scenic[0]"

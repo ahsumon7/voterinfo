@@ -5,9 +5,9 @@
     <string name="main_header_title">জাতীয় সংসদ নির্বাচন ২০২৫</string>
     <string name="main_header_subtitle">শেরপুর-১ (সদর) আসন</string>
     <string name="button_voter_info">ভোটারের তথ্য</string>
-    <string name="button_placeholder_1">অন্যান্য তথ্য ১</string>
-    <string name="button_placeholder_2">অন্যান্য তথ্য ২</string>
-    <string name="button_placeholder_3">অন্যান্য তথ্য ৩</string>
+    <string name="button_placeholder_1">নেতাকর্মীদের তথ্য</string>
+    <string name="button_placeholder_2">প্রশাসন</string>
+    <string name="button_placeholder_3">সাংবাদিক</string>
 
     <!-- Voter List Screen -->
     <string name="title_activity_voter_list">ভোটকেন্দ্রের তালিকা</string>
