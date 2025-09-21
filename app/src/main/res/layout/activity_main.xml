@@ -51,13 +51,31 @@
             app:cardElevation="4dp"
             android:layout_margin="8dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/button_voter_info"
-                android:padding="16dp"
-                android:gravity="center"
-                android:textSize="16sp"/>
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="97dp"
+                    android:layout_height="51dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/button_voter_info"
+                    android:foreground="@drawable/ic_voter_info"
+                    android:src="@mipmap/ic_launcher"
+                    android:visibility="visible"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic[0]"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_voter_info"
+                    android:gravity="center"
+                    android:textSize="16sp"/>
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -66,17 +84,37 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
+            android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="4dp"
-            android:layout_margin="8dp">
+            app:cardElevation="4dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/button_placeholder_1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
                 android:padding="16dp"
-                android:gravity="center"
-                android:textSize="16sp"/>
+                tools:ignore="UseCompoundDrawables">
+
+            
+            <ImageView
+                android:layout_width="97dp"
+            android:layout_height="51dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/button_placeholder_1"
+            android:foreground="@drawable/ic_voter_info"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="visible"
+            tools:srcCompat="@tools:sample/backgrounds/scenic[0]"
+            tools:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/button_placeholder_1"
+            android:textSize="16sp" />
+        </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -89,13 +127,31 @@
             app:cardElevation="4dp"
             android:layout_margin="8dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/button_placeholder_2"
-                android:padding="16dp"
-                android:gravity="center"
-                android:textSize="16sp"/>
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="97dp"
+                    android:layout_height="51dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/button_placeholder_2"
+                    android:foreground="@drawable/ic_voter_info"
+                    android:src="@mipmap/ic_launcher"
+                    android:visibility="visible"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic[0]"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_placeholder_2"
+                    android:gravity="center"
+                    android:textSize="16sp"/>
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -108,13 +164,31 @@
             app:cardElevation="4dp"
             android:layout_margin="8dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/button_placeholder_3"
-                android:padding="16dp"
-                android:gravity="center"
-                android:textSize="16sp"/>
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="97dp"
+                    android:layout_height="51dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/button_placeholder_3"
+                    android:foreground="@drawable/ic_voter_info"
+                    android:src="@mipmap/ic_launcher"
+                    android:visibility="visible"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic[0]"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_placeholder_3"
+                    android:gravity="center"
+                    android:textSize="16sp"/>
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
     </GridLayout>
