@@ -10,35 +10,40 @@
         android:id="@+id/tvMainHeaderTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:text="@string/main_header_title"
-        android:textSize="24sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.693"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvMainHeaderSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/main_header_subtitle"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/tvMainHeaderTitle"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMainHeaderTitle" />
 
     <GridLayout
         android:id="@+id/glMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="56dp"
         android:columnCount="2"
         android:rowCount="2"
         android:useDefaultMargins="true"
-        app:layout_constraintTop_toBottomOf="@+id/tvMainHeaderSubtitle"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMainHeaderSubtitle"
         app:layout_constraintWidth_percent="0.9">
 
         <androidx.cardview.widget.CardView
@@ -47,15 +52,15 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
+            android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="4dp"
-            android:layout_margin="8dp">
+            app:cardElevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:gravity="center_horizontal"
+                android:orientation="vertical"
                 android:padding="16dp">
 
                 <ImageView
@@ -72,9 +77,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/button_voter_info"
                     android:gravity="center"
-                    android:textSize="16sp"/>
+                    android:text="@string/button_voter_info"
+                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -90,7 +95,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
                 android:padding="16dp"
@@ -98,7 +103,7 @@
 
 
                 <ImageView
-                    android:layout_width="97dp"
+                    android:layout_width="118dp"
                     android:layout_height="51dp"
                     android:layout_marginBottom="8dp"
                     android:contentDescription="@string/button_placeholder_1"
@@ -108,13 +113,13 @@
                     tools:srcCompat="@tools:sample/backgrounds/scenic[0]"
                     tools:visibility="visible" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/button_placeholder_1"
-            android:textSize="16sp" />
-        </LinearLayout>
+                <TextView
+                    android:layout_width="126dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/button_placeholder_1"
+                    android:textSize="16sp" />
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -123,15 +128,15 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
+            android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="4dp"
-            android:layout_margin="8dp">
+            app:cardElevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:gravity="center_horizontal"
+                android:orientation="vertical"
                 android:padding="16dp">
 
                 <ImageView
@@ -148,9 +153,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/button_placeholder_2"
                     android:gravity="center"
-                    android:textSize="16sp"/>
+                    android:text="@string/button_placeholder_2"
+                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -160,15 +165,15 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_gravity="fill_horizontal"
+            android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="4dp"
-            android:layout_margin="8dp">
+            app:cardElevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:gravity="center_horizontal"
+                android:orientation="vertical"
                 android:padding="16dp">
 
                 <ImageView
@@ -185,12 +190,100 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/button_placeholder_3"
                     android:gravity="center"
-                    android:textSize="16sp"/>
+                    android:text="@string/button_placeholder_3"
+                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvPlaceholder4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="87dp"
+                    android:layout_height="51dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/button_placeholder_4"
+                    android:foreground="@drawable/ic_emergency_info"
+                    android:src="@mipmap/ic_launcher"
+                    android:visibility="visible"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic[0]"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/button_placeholder_4"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvPlaceholder5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="87dp"
+                    android:layout_height="51dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="@string/button_placeholder_5"
+                    android:foreground="@drawable/ic_others_info"
+                    android:src="@mipmap/ic_launcher"
+                    android:visibility="visible"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic[0]"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/button_placeholder_5"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
     </GridLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="61dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="@string/main_logo_content_description"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/main_logo" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,9 @@
     <string name="button_placeholder_1">নেতাকর্মীদের তথ্য</string>
     <string name="button_placeholder_2">প্রশাসন</string>
     <string name="button_placeholder_3">সাংবাদিক</string>
+    <string name="button_placeholder_4">জরুরী সেবা </string>
+    <string name="button_placeholder_5">অন্যান্য</string>
+    <string name="main_logo_content_description">Main application logo</string>
 
     <!-- Voter List Screen -->
     <string name="title_activity_voter_list">ভোটকেন্দ্রের তালিকা</string>
