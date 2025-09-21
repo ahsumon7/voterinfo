@@ -49,5 +49,38 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp"/>
+    <TextView
+        android:id="@+id/tvTotalVoters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/total_voters"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Added Name TextView -->
+    <TextView
+        android:id="@+id/tvContactName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Md Zihad"
+        android:textSize="18sp"
+        android:layout_marginTop="24dp" /> <!-- Added some top margin -->
+
+    <!-- Added Phone Number TextView -->
+    <TextView
+        android:id="@+id/tvContactPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0192178844"
+        android:textSize="18sp"
+        android:autoLink="phone"
+        android:linksClickable="true"
+        android:textColorLink="@color/purple_500"
+        android:layout_marginTop="8dp" />
+
 
 </LinearLayout>
+
+
+
